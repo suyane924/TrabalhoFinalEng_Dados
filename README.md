@@ -1,1 +1,4 @@
-# TrabalhoFinalEng_Dados
+Integrantes:
+Gabriel Macieiski
+Maria Eduarda
+Suyane 
