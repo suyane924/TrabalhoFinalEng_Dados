@@ -1,4 +1,4 @@
 Integrantes:
-Gabriel Macieiski
-Maria Eduarda
+Gabriel Macieiski,
+Maria Eduarda,
 Suyane 
