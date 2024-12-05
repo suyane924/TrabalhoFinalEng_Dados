@@ -147,6 +147,7 @@ A geração da massa de dados foi realizada com a biblioteca Faker.
 Para garantir escalabilidade e durabilidade, os dados serão armazenados no Object Storage da Azure.
 
 4. Estrutura de Camadas de Dados:
+   
 Landing Zone:
 Ingestão e armazenamento dos dados brutos, camada de entrada.
 
