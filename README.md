@@ -1,8 +1,8 @@
-# Título do projeto
+# CommerceFlow
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Um parágrafo da descrição do projeto vai aqui
+O CommerceFlow é um sistema de gestão de vendas e estoque que utiliza tecnologias como Apache Spark, PySpark, Databricks, Azure e Terraform para processar e organizar grandes volumes de dados de maneira eficiente. O sistema oferece funcionalidades de controle de inventário, processamento de pedidos e pagamentos, além de realizar a gestão de clientes e entregas, tudo com uma arquitetura escalável e otimizada para grandes volumes de dados.
 
 ## Começando
 
@@ -12,10 +12,7 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 ## Desenho de Arquitetura
 
-Coloqui uma imagem do seu projeto, como no exemplo abaixo:
-
-![image](https://github.com/jlsilva01/projeto-ed-satc/assets/484662/541de6ab-03fa-49b3-a29f-dec8857360c1)
-
+![image](https://github.com/suyane924/TrabalhoFinalEng_Dados/blob/Guna-Me/CommerceFlow/Ferramentas.drawio.png)
 
 ## Pré-requisitos
 
