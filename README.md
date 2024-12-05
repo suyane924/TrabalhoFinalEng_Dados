@@ -56,6 +56,9 @@ pip install -r requirements.txt
 ```
 
 ### Passo 3: Configurar infraestrutura com terraform (após certificar-se de que obtém os pré-requisitos)
+
+- É necessário utilizar uma máquina virtual com o sistema operacional Ubuntu para realizar a configuração, visto que o Terraform será usado para criar a infraestrutura remotamente na Azure.
+  
 # Configuração do Azure Data Lake e SQL Server com Terraform
 
 ## Passos
@@ -134,11 +137,34 @@ Configure os gráficos e dashboards de acordo com os modelos disponibilizados.
 ## Implantação 
 - Para implantar o projeto em um ambiente ativo, certifique-se de que todas as dependências estejam configuradas, configure as credenciais no arquivo .env, e execute os comandos de inicialização descritos acima.
 
+1. Orquestração de Fluxos de Trabalho com Databricks:
+Nossa principal ferramenta para gerenciar os fluxos de trabalho coordenando todas as etapas da pipeline de dados.
 
+2. Criação de Dados Sintéticos com a Biblioteca Faker:
+A geração da massa de dados foi realizada com a biblioteca Faker.
+
+3. Armazenamento Persistente no Azure Object Storage:
+Para garantir escalabilidade e durabilidade, os dados serão armazenados no Object Storage da Azure.
+
+4. Estrutura de Camadas de Dados:
+Landing Zone:
+Ingestão e armazenamento dos dados brutos, camada de entrada.
+
+Camada Bronze:
+Armazenamento de dados transformados minimamente e enriquecidos com informações adicionais.
+
+Camada Silver:
+As informações são padronizadas e salvas no formato Parquet.
+
+Camada Gold:
+Dados estruturados em tabelas otimizadas para análise, com a criação de dimensões e fatos adequadas para relatórios.
+
+5. Dashboards Interativos com Power BI:
+O Power BI será empregado para a visualização dos dados, permitindo a construção de dashboards dinâmicos que auxiliam na análise e na tomada de decisões.
 
 ## Autores
 
-- [Maria Eduarda Monteiro Marcos](https://github.com/Guna-ME) - Configuração Azure, Databricks, script para geração dos dados com faker, automoção entre as lands]
+- [Maria Eduarda Monteiro Marcos](https://github.com/Guna-ME) - Configuração Azure, Databricks, script para geração dos dados com faker, automação entre as lands.
 - [Gabriel Tarciso Macieiski](https://github.com/GTM016) - Documentação MkDocks.
 - [Suyane Bonfanti dos Santos](https://github.com/suyane924) - Geração dos arquivos csv, códigos para processar os dados entre as camadas landing, bronze, silver e gold, diagrama dimensional.
 
@@ -151,6 +177,6 @@ Este projeto está sob a licença - veja o arquivo [LICENSE](https://github.com/
 
 ## Referências
 
-Cite aqui todas as referências utilizadas neste projeto, pode ser outros repositórios, livros, artigos de internet etc.
+[CHATGPT](https://chatgpt.com/) [DOCUMENTAÇÃO GITHUB JORGE LUIZ DA SILVA](https://github.com/jlsilva01/engenharia-dados-azure-databricks)
 
 
