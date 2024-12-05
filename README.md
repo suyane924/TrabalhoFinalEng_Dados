@@ -10,14 +10,15 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 Consulte implantação para saber como implantar o projeto.
 
-Esta documentação está disponível também no MkDocks
+Esta documentação está disponível também no [MkDocks](colocar o link do mkdocks)
 
 ## Ferramentas utilizadas 
 - [SQL Server](https://www.microsoft.com/sql-server) - Banco de dados relacional para armazenamento de dados.  
 - [Python](https://www.python.org/) - Desenvolvimento de scripts de automação.  
 - [Terraform](https://www.terraform.io/) - Gerenciamento de infraestrutura como código.  
 - [Databricks](https://www.databricks.com/) - Processamento distribuído de dados.  
-- [Azure](https://azure.microsoft.com/) - Persistência em Object Storage.  
+- [Azure](https://azure.microsoft.com/) - Persistência em Object Storage.
+- [Ubuntu](https://ubuntu.com/blog/tag/labs) - Máquina virtual para rodar o Terraform.
 - [Power BI](https://powerbi.microsoft.com/) - Visualização e análise de dados.  
 - [MkDocs](https://www.mkdocs.org/) - Documentação do projeto.  
 
@@ -33,6 +34,7 @@ Antes de iniciar, você precisará ter instalado:
 - [Azure CLI](https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+- [Ubuntu](https://ubuntu.com/download)
 - Conta Microsoft Learning (assinatura sandbox)
 
 
