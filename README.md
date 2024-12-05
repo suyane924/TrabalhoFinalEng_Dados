@@ -8,7 +8,19 @@ O CommerceFlow é um sistema de gestão de vendas e estoque que utiliza tecnolog
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+Consulte implantação para saber como implantar o projeto.
+
+Esta documentação está disponível também no MkDocks
+
+## Ferramentas utilizadas 
+- [SQL Server](https://www.microsoft.com/sql-server) - Banco de dados relacional para armazenamento de dados.  
+- [Python](https://www.python.org/) - Desenvolvimento de scripts de automação.  
+- [Terraform](https://www.terraform.io/) - Gerenciamento de infraestrutura como código.  
+- [Databricks](https://www.databricks.com/) - Processamento distribuído de dados.  
+- [Azure](https://azure.microsoft.com/) - Persistência em Object Storage.  
+- [Power BI](https://powerbi.microsoft.com/) - Visualização e análise de dados.  
+- [MkDocs](https://www.mkdocs.org/) - Documentação do projeto.  
+
 
 ## Desenho de Arquitetura
 
@@ -16,77 +28,124 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 ## Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+Antes de iniciar, você precisará ter instalado:  
+- [Pyhton](python.org)
+- [Azure CLI](https://docs.microsoft.com/pt-br/cli/azure/install-azure-cli)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+- Conta Microsoft Learning (assinatura sandbox)
+
+
+## Instalação  
+
+### Passo 1: Clonar o repositório  
+```bash  
+git clone https://github.com/suyane924/TrabalhoFinalEng_Dados.git  
+cd seu-repositorio
 
 ```
-Dar exemplos
-```
 
-## Instalação
-
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
+### Passo 2: Configurar ambiente python
+```bash  
+python -m venv venv  
+source venv/bin/activate  # (No Windows: venv\Scripts\activate)  
+pip install -r requirements.txt  
 
 ```
-Dar exemplos
+
+### Passo 3: Configurar infraestrutura com terraform (após certificar-se de que obtém os pré-requisitos)
+# Configuração do Azure Data Lake e SQL Server com Terraform
+
+## Passos
+
+### 1. Ativar uma Assinatura de Teste
+
+Utilize a assinatura MS Learn Sandbox para limitar o tempo de uso.
+
+### 2. Configuração da Azure CLI
+
+Antes de iniciar, clone o projeto contendo os arquivos `.tf` e abra-o no Visual Studio Code.
+
+#### 2.1 Login na Azure CLI
+
+```sh
+az login
 ```
 
-E repita:
+#### 2.2 Obter o Nome do Grupo de Recursos
 
-```
-Até finalizar
-```
-
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
-## Implantação
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
-## Ferramentas utilizadas
-
-Mencione as ferramentas que você usou para criar seu projeto
-
-* Ferramenta 1 + link - Breve descrição
-* Ferramenta 2 + link - Breve descrição
-* Ferramenta 3 + link - Breve descrição
-
-## Colaboração
-
-Por favor, leia o [COLABORACAO](https://gist.github.com/usuario/colaboracao.md) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-Se desejar publicar suas modificações em um repositório remoto no GitHub, siga estes passos:
-
-1. Crie um novo repositório vazio no GitHub.
-2. No terminal, navegue até o diretório raiz do projeto.
-3. Execute os seguintes comandos:
-
-```bash
-git remote set-url origin https://github.com/seu-usuario/nome-do-novo-repositorio.git
-git add .
-git commit -m "Adicionar minhas modificações"
-git push -u origin master
+```sh
+az group list -o table
 ```
 
-Isso configurará o repositório remoto e enviará suas modificações para lá.
+#### 2.2 Obter o Nome do Grupo de Recursos
 
-## Versão
+```sh
+az group list -o table
+```
 
-Fale sobre a versão e o controle de versões para o projeto. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
+### 3. Executar o Terraform
+
+#### 3.1 Inicializar o Terraform
+
+```sh
+terraform init
+```
+
+#### 3.2 Validar o código nos arquivos .tf
+
+```sh
+terraform validate
+```
+
+#### 3.3 Ajustar a formatação nos arquivos .tf
+
+```sh
+terraform fmt
+```
+
+#### 3.4 Criar um plano de execução
+
+```sh
+terraform plan
+```
+
+#### 3.5 Aplicar o Terraform na nuvem
+
+```sh
+terraform apply
+```
+
+### 3.6 Verificar o deploy do ADLS e do SQL Server
+
+- Faça login em [Portal Azure](https://portal.azure.com/) e verifique o ADLS e o SQL Server criado.
+- Liberar IP no firewall do SQL Server nas configurações de rede.
+
+### Passo 4: Executar pipelines no Databricks
+Acesse o workspace configurado e importe os notebooks.
+Execute as tarefas conforme o cronograma definido.
+
+### Passo 5: Visualizar os dados com Power BI
+Conecte ao Azure Blob Storage para importar os dados processados.
+Configure os gráficos e dashboards de acordo com os modelos disponibilizados.
+
+## Implantação 
+- Para implantar o projeto em um ambiente ativo, certifique-se de que todas as dependências estejam configuradas, configure as credenciais no arquivo .env, e execute os comandos de inicialização descritos acima.
+
+
 
 ## Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
+- [Maria Eduarda Monteiro Marcos](https://github.com/Guna-ME) - Configuração Azure, Databricks, script para geração dos dados com faker, automoção entre as lands]
+- [Gabriel Tarciso Macieiski](https://github.com/GTM16) - Documentação MkDocks.
+- [Suyane Bonfanti dos Santos](https://github.com/suyane924) - Geração dos arquivos csv, códigos para processar os dados entre as camadas landing, bronze, silver e gold, diagrama dimensional.
 
-* **Aluno 1** - *Trabalho Inicial* - [(https://github.com/linkParaPerfil)](https://github.com/linkParaPerfil)
-* **Aluno 2** - *Documentação* - [https://github.com/linkParaPerfil](https://github.com/linkParaPerfil)
 
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
+Você também pode ver a lista de todos os [colaboradores](gitHub.com/suyane924/TrabalhoFinalEng_Dados/graphs/contributors) que participaram deste projeto.
 
 ## Licença
 
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE](https://github.com/jlsilva01/projeto-ed-satc/blob/main/LICENSE) para detalhes.
+Este projeto está sob a licença - veja o arquivo [LICENSE](https://github.com/jlsilva01/projeto-ed-satc/blob/main/LICENSE) para detalhes.
 
 ## Referências
 
