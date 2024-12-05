@@ -139,7 +139,7 @@ Configure os gráficos e dashboards de acordo com os modelos disponibilizados.
 ## Autores
 
 - [Maria Eduarda Monteiro Marcos](https://github.com/Guna-ME) - Configuração Azure, Databricks, script para geração dos dados com faker, automoção entre as lands]
-- [Gabriel Tarciso Macieiski](https://github.com/GTM16) - Documentação MkDocks.
+- [Gabriel Tarciso Macieiski](https://github.com/GTM016) - Documentação MkDocks.
 - [Suyane Bonfanti dos Santos](https://github.com/suyane924) - Geração dos arquivos csv, códigos para processar os dados entre as camadas landing, bronze, silver e gold, diagrama dimensional.
 
 
